@@ -20,7 +20,7 @@ local.properties
 # Eclipse files
 .classpath
 .project
-.class
+*.class
 
 # PyDev specific (Python IDE for Eclipse)
 *.pydevproject

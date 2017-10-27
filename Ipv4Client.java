@@ -1,3 +1,12 @@
+/*
+*Peter Knight
+*Eric Kannampuzha
+*Project 3
+*Class Ipv4Client.java
+*CS 380
+*Nima
+*/
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -18,7 +27,6 @@ public class Ipv4Client {
             Socket socket = new Socket("18.221.102.182", 38003);
             System.out.println("Connected to server.");
             InputStream is = socket.getInputStream();
-            //DataInputStream dis = new DataInputStream(is);
             InputStreamReader isr = new InputStreamReader(is);
             BufferedReader br = new BufferedReader(isr);
             OutputStream os = socket.getOutputStream();
@@ -61,7 +69,7 @@ public class Ipv4Client {
                 System.out.println("data length: " + (int)Math.pow(2,i));
                 dos.write(ipv4.array());
                 String check = br.readLine();
-                System.out.println(check + "\n");
+                System.out.println(check);
             }
         }
         catch(Exception e) {
